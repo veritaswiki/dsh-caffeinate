@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Caffeinate · Sleep Guard",
+    "description": "Runs macOS caffeinate while DeepSeek Harness is running and binds the assertion to the host process with -w: the display may still lock and sleep, while system, CPU and disk idle sleep are held off during long tasks. Includes the /keepawake command."
+  }
+}

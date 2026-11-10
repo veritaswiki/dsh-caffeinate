@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "防休眠守护 · Caffeinate",
+    "description": "在 DSH 运行期间调用 macOS 自带的 caffeinate，并用 -w 把断言绑定到宿主进程：允许显示器正常息屏锁屏，但阻止系统、CPU 与磁盘空闲休眠，防止长任务与编队执行被打断。可用 /keepawake 查看与切换。"
+  }
+}

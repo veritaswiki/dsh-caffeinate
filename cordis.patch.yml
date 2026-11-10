@@ -1,0 +1,18 @@
+# dsh-caffeinate — 防休眠守护
+#
+# 由 DSH Loader 读取并把本插件插入为一行 Loader 条目。
+# 注意：insert.name 必须与 package.json 的 name 完全一致，Loader 按包名解析模块。
+#
+# 运行时行为：在 DSH 运行期间调用 macOS 自带的 /usr/bin/caffeinate，
+# 末尾固定加 -w <Host PID>，把断言绑到宿主进程生命周期上；
+# 宿主退出或崩溃后 caffeinate 自行释放断言并退出（caffeinate(8) 的 -w 语义）。
+- insert:
+    - id: dsh-caffeinate
+      name: 'dsh-caffeinate'
+      config:
+        enabled: true
+        mode: always
+        preventIdleSystemSleep: true
+        preventSystemSleepOnAC: true
+        preventDiskSleep: true
+        preventDisplaySleep: false

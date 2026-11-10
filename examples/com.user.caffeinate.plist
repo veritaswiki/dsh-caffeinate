@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  dsh-caffeinate · examples/com.user.caffeinate.plist
+
+  这是一份**可选的、系统级**的 LaunchAgent 示例，插件本身不安装它、不读取它、
+  也不依赖它。它演示的是另一半做法：不跟随任何进程，登录后常驻，
+  让整台机器一直不进入系统空闲休眠。
+
+  与插件的区别：
+    - 插件（/usr/bin/caffeinate -w <Host PID>）随 DSH 退出自动释放断言；
+    - 本示例没有 -w，KeepAlive 让它退出后被重新拉起，因此**会一直生效直到 unload**。
+  两者同时存在时断言会叠加，/keepawake off 只关闭插件那一层。
+
+  使用方式（自行决定，装之前先想清楚是否需要常驻）：
+    1. 复制到 ~/Library/LaunchAgents/com.user.caffeinate.plist
+    2. 加载：launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/com.user.caffeinate.plist
+    3. 卸载：launchctl bootout   gui/$(id -u) ~/Library/LaunchAgents/com.user.caffeinate.plist
+
+  本文件不含任何个人路径：caffeinate 就在 /usr/bin，参数也只有开关。
+-->
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.user.caffeinate</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/usr/bin/caffeinate</string>
+    <string>-i</string>
+    <string>-s</string>
+    <string>-m</string>
+  </array>
+  <key>RunAtLoad</key>
+  <true/>
+  <key>KeepAlive</key>
+  <true/>
+  <key>ProcessType</key>
+  <string>Background</string>
+</dict>
+</plist>

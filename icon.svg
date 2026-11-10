@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" fill="none">
+  <defs>
+    <linearGradient id="kaBg" x1="6" y1="6" x2="58" y2="58" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="55%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#334155"/>
+    </linearGradient>
+    <linearGradient id="kaCup" x1="16" y1="26" x2="46" y2="50" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FBBF24"/>
+      <stop offset="100%" stop-color="#EA580C"/>
+    </linearGradient>
+    <linearGradient id="kaSteam" x1="22" y1="12" x2="38" y2="24" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#FDE047"/>
+    </linearGradient>
+  </defs>
+  <rect x="4" y="4" width="56" height="56" rx="14" fill="url(#kaBg)" stroke="#F59E0B" stroke-width="2"/>
+  <!-- steam waves -->
+  <path d="M23 22C23 19 26 18 26 15C26 13 24 12 24 12" stroke="url(#kaSteam)" stroke-width="2.2" stroke-linecap="round"/>
+  <path d="M31 21C31 18 34 17 34 14C34 12 32 11 32 11" stroke="url(#kaSteam)" stroke-width="2.2" stroke-linecap="round"/>
+  <path d="M39 22C39 19 42 18 42 15C42 13 40 12 40 12" stroke="url(#kaSteam)" stroke-width="2.2" stroke-linecap="round"/>
+  <!-- coffee cup body -->
+  <path d="M17 27H43V38C43 44.6274 37.6274 50 31 50H29C22.3726 50 17 44.6274 17 38V27Z" fill="url(#kaCup)" stroke="#FEF08A" stroke-width="1.5" stroke-linejoin="round"/>
+  <!-- cup handle -->
+  <path d="M43 30H46.5C49.5376 30 52 32.4624 52 35.5C52 38.5376 49.5376 41 46.5 41H43" stroke="#FBBF24" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- lightning bolt inside cup -->
+  <path d="M31.5 31L26.5 38H31L29.5 45L35.5 37H31L31.5 31Z" fill="#0F172A"/>
+</svg>

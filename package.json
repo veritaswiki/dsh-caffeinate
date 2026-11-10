@@ -1,0 +1,62 @@
+{
+  "name": "dsh-caffeinate",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Keep the Mac awake while DeepSeek Harness runs: a macOS caffeinate child process bound to the host pid with -w, plus the /keepawake command family.",
+  "license": "MIT",
+  "author": {
+    "name": "veritaswiki",
+    "url": "https://github.com/veritaswiki"
+  },
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "dsh",
+    "cordis",
+    "caffeinate",
+    "keep-awake",
+    "macos",
+    "sleep-prevention"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/veritaswiki/dsh-caffeinate.git"
+  },
+  "homepage": "https://github.com/veritaswiki/dsh-caffeinate#readme",
+  "bugs": {
+    "url": "https://github.com/veritaswiki/dsh-caffeinate/issues"
+  },
+  "icon": "./icon.svg",
+  "exports": {
+    ".": "./index.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "assets/icon-180.png",
+    "README.md",
+    "README.en.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "peerDependencies": {
+    "@deepseek-ai/schemastery": ">=3.0.0-0"
+  },
+  "scripts": {
+    "check": "node --check index.js",
+    "sanitize": "node scripts/sanitize-check.mjs"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}
