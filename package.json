@@ -1,6 +1,6 @@
 {
   "name": "dsh-caffeinate",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "type": "module",
   "description": "Keep the Mac awake while DeepSeek Harness runs: a macOS caffeinate child process bound to the host pid with -w, plus the /keepawake command family.",
   "license": "MIT",

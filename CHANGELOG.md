@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.0] - 2026-11-11
+
+First public release.
+
+> Version note: earlier iterations used internal sequence numbers (the sections below). The public series restarts here at 0.1.0; internal numbers are not carried over.
+
+
 本项目遵循 [Keep a Changelog](https://keepachangelog.com/) 与 [语义化版本](https://semver.org/)。
 
 ## [Unreleased]
